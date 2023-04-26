@@ -10,6 +10,11 @@
 
 # Processo 01 - O sistema de login deve permitir que novos usuários sejam cadastrados
 
+# Processo 02 - O sistema não deve permitir que usuários duplicados sejam cadastrados
+
+# Processo 03 - Permitir que usuários existentes possam fazer login
+
+
 '''
  1 - Quais são os dados de entrada necessários?
    - usuario, senha
@@ -25,20 +30,24 @@
    - verificar se o usuário já existe
    - caso não exista, cadastrar aquele usuário e senha
 '''
-# armazenando usuários existentes
 
-usuarios = ['Rafael', 'Metal Omega', 'Silveira']
-senhas = ['12345', 'abcdef', '123abcd']
+# Processo 03 - Permitir que usuários existentes possam fazer login
+resposta = input('[1] - Cadastrar novo usuário [2] - Fazer login: ')
 
-# recebendo usuário | em Python digitar sempre em minúsculo e sem caracter especial
-usuario_digitado = input('digite seu usuário: ')
+# if condição == condição | comparação no python
+if resposta == '1':
+    # abaixo é necessário realizar identamento (espaçamento)
+    # armazenando usuários existentes
+    usuarios = ['Rafael', 'Metal Omega', 'Silveira']
+    senhas = ['12345', 'abcdef', '123abcd']
+    # recebendo usuário | em Python digitar sempre em minúsculo e sem caracter especial
+    usuario_digitado = input('digite seu usuário: ')
+    # recebendo senha
+    senha_digitada = input('digite sua senha: ')
+    # comando append adiciona variável
+    usuarios.append(usuario_digitado)
+    senhas.append(senha_digitada)
 
-# recebendo senha
-senha_digitada = input('digite sua senha: ')
 
-# comando append adiciona variável
-usuarios.append(usuario_digitado)
-senhas.append(senha_digitada)
-
-# verificar se funcionou
-print(usuarios)
+# elif resposta == '2':
+    # Processo 03 - Permitir que usuários existentes possam fazer login
