@@ -30,15 +30,12 @@
 usuarios = ['Rafael', 'Metal Omega', 'Silveira']
 senhas = ['12345', 'abcdef', '123abcd']
 
-# recebendo usuário | em Python digitar sempre em minúsculo e sem caracter especial
-usuario_digitado = input('digite seu usuário: ')
+# recebendo usuário
+usuario = input('digite seu usuário: ')
 
 # recebendo senha
-senha_digitada = input('digite sua senha: ')
+senha = input('digite sua senha: ')
 
-# comando append adiciona variável
-usuarios.append(usuario_digitado)
-senhas.append(senha_digitada)
-
-# verificar se funcionou
-print(usuarios)
+# verificar usuários existentes
+for usuario in usuarios:
+    print(usuario)
