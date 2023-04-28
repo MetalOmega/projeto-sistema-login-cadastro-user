@@ -57,11 +57,11 @@ elif resposta == '2':
     usuario_digitado = input('Digite seu usuário: ')
     # pedir senha
     senha_digitada = input('Digite sua senha: ')
-# verificar se o usuário existe na lista
-if usuario_digitado in usuarios:
-    print('encontrado')
-
-'''for usuario in usuarios:
-    print(usuarios)'''
-
-# verificar se a senha providenciada para aquele usuário é a mesma senha que está na lista de senhas
+    # verificar se o usuário existe na lista
+    '''if usuario_digitado in usuarios:
+        print('encontrado')'''
+    '''for usuario in usuarios:
+        print(usuarios)'''
+    # verificar se a senha providenciada para aquele usuário é a mesma senha que está na lista de senhas
+    for indice, item in enumerate(usuarios):
+        print(indice, item)
