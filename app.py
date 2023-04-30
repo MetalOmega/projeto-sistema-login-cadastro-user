@@ -46,11 +46,15 @@ if resposta == '1':
     # abaixo é necessário realizar identamento (espaçamento)
     # recebendo usuário | em Python digitar sempre em minúsculo e sem caracter especial
     usuario_digitado = input('digite seu usuário: ')
-    # recebendo senha
-    senha_digitada = input('digite sua senha: ')
-    # comando append adiciona variável
-    usuarios.append(usuario_digitado)
-    senhas.append(senha_digitada)
+    if usuario_digitado in usuarios:
+        print('usuário existente')
+        # break
+    else:
+        # recebendo senha
+        senha_digitada = input('digite sua senha: ')
+        # comando append adiciona variável
+        usuarios.append(usuario_digitado)
+        senhas.append(senha_digitada)
 elif resposta == '2':
     # Processo 03 - Permitir que usuários existentes possam fazer login
     # pedir usuario
