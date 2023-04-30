@@ -69,11 +69,14 @@ elif resposta == '2':
     # verificar se a senha providenciada para aquele usuário é a mesma senha que está na lista de senhas
     encontrado = False
     for indice, usuario in enumerate(usuarios):
+        # processo 04 - o sistema não deve permitir que o usuário existente cadastre-se novamente
         if usuario_digitado == usuario and senha_digitada == senhas[indice]:
             print('Login realizado com sucesso')
             encontrado = True
         elif encontrado == False:
+            # o sistema deve alertar caso usuário ou senha estejam incorretos
             print('usuário ou senha incorreto!')
+# comando para direcional o usuário a digitar apenas 1 ou 2
 else:
     print('digite apenas 1 ou 2')
     '''for indice, item in enumerate(usuarios):
