@@ -63,5 +63,14 @@ elif resposta == '2':
     '''for usuario in usuarios:
         print(usuarios)'''
     # verificar se a senha providenciada para aquele usuário é a mesma senha que está na lista de senhas
-    for indice, item in enumerate(usuarios):
-        print(indice, item)
+    encontrado = False
+    for indice, usuario in enumerate(usuarios):
+        if usuario_digitado == usuario and senha_digitada == senhas[indice]:
+            print('Login realizado com sucesso')
+            encontrado = True
+        elif encontrado == False:
+            print('usuário ou senha incorreto!')
+else:
+    print('digite apenas 1 ou 2')
+    '''for indice, item in enumerate(usuarios):
+        print(indice, item)'''
